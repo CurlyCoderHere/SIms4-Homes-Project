@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIMS4 Home Design</title>
+  <link rel="stylesheet" href="style.css" />
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+
+    <!-- The Navigation menu -->
+    <nav>
+      <div class="logo">
+        <img src="https://logos-download.com/wp-content/uploads/2016/12/Sims_4_logo_logotype.png" alt="SIMS 4 logo" />
+      </div>
+
+     
+      <div class="nav-bar">
+        <ul class="nav_bar_links_ul">
+          <li><a href="#">Home</a></li>
+          <li><a href="#kitchen">Kitchen Ideas</a></li>
+          <li><a href="#living">Living Room Ideas</a></li>
+          <li><a href="#bedroom">Bedroom Ideas</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header Slideshow -->
+    <ul class="slideshow">
+      <li><span class="dot"></span></li>
+      <li><span class="dot">2</span></li>
+      <li><span class="dot"></span></li>
+      <li><span class="dot"></span></li>
+      <li><span class="dot"></span></li>
+    </ul>
+
+
+    <img class="main-logo"
+      src="https://4.bp.blogspot.com/-yJBB2nm4bLQ/VYn7rk9JsmI/AAAAAAAAAD4/jKm5De5MmB4/s1600/logo.png"
+      alt="SIMS 4 House logo" />
+    <h1> Welcome To The SIMS 4 Home Design</h1>
+
+  </header>
+  <div id="Lightbox" class="modal">
+    <div class="modal-content">
+      <span class="close pointer" onclick="closeLightbox()">&times;</span>
+      <!-- Need to dynamically fill this in with the image you clicked with JS-->
+    </div>
+  </div>
+
+  
+  <div class="first" id="kitchen">
+    <div class="row">
+      <p>Kitchen Ideas</p>
+      <div class="column">
+        <img src="https://i.redd.it/i3rz1yphpjz41.jpg"
+          alt="Kitchen" style="width:100%; height: 250px;" onclick="openLightbox(this.src)" class ="image-slide">
+      </div>
+      <div class="column">
+        <img src="https://i.redd.it/53w9p8dncqm51.png" alt="Kitchen"
+          style="width:100%; height: 250px;" onclick="openLightbox(this.src)" class ="image-slide" > 
+      </div>
+      <div class="column">
+        <img src="https://i.pinimg.com/originals/2e/67/d2/2e67d26ec0ad702223ba2910ad974c2a.jpg" alt="Kitchen"
+          style="width:100%; height: 250px; " onclick="openLightbox(this.src)" class ="image-slide">
+      </div>
+    </div>
+  </div>
+
+  <div class="second" id="living">
+    <div class="row">
+      <p>Living Room Ideas</p>
+      <div class="column">
+        <img src="https://nimvo.com/wp-content/uploads/2020/08/Sims-Industrial-Living-Room.jpg"
+          alt="Eclectic" style="width:100%; height: 250px;" onclick="openLightbox(this.src)" class ="image-slide">
+      </div>
+      <div class="column">
+        <img src="https://sims4downloads.net/wp-content/uploads/2014/11/4824.jpg" alt="Boho Living Room"
+          style="width:100%; height: 250px;" onclick="openLightbox(this.src)" class ="image-slide">
+      </div>
+      <div class="column">
+        <img src="https://assets.gamepur.com/wp-content/uploads/2020/11/11115118/Come-Cozy.jpg" alt="Mid-Century"
+          style="width:100%; height: 250px;" onclick="openLightbox(this.src)" class ="image-slide">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="third" id="bedroom">
+    <div class="row">
+      <p> Bedroom Ideas</p>
+      <div class="column">
+        <img src="https://i.pinimg.com/originals/18/ae/1f/18ae1f152c4a20ba8ad45dd54683d5a7.png"
+          alt="Eclectic" style="width:100%; height: 250px;" onclick="openLightbox(this.src)" class ="image-slide">
+      </div>
+      <div class="column">
+        <img src="https://simsvip.com/wp-content/uploads/2021/03/bunk-bed-22.jpg" alt="Boho Living Room"
+          style="width:100%; height: 250px;" onclick="openLightbox(this.src)" class ="image-slide">
+      </div>
+      <div class="column">
+        <img src="https://i.pinimg.com/originals/d9/ac/40/d9ac409bdd898e990b6d51a066980127.jpg" alt="Mid-Century"
+          style="width:100%; height: 250px;" onclick="openLightbox(this.src)" class ="image-slide">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #f8f8ff;
+}
+
+/* Navigation Menu */
+nav {
+  display: flex;
+}
+
+/*refers to the div with the class nav-bar that wraps around the navigational li tags */
+.nav-bar {
+  width: 75%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+}
+
+/* Controls what happens to the tag */
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #1E90FF;
+  font-size: 105%;
+}
+
+/*refers to the ul that contains the navigational li tags*/
+.nav_bar_links_ul {
+  float: left;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/*stying applied to the navigational li tags specifically*/
+.nav_bar_links_ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+/* div that wraps the logo image in the menu*/
+div.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 7%;
+  position: relative;
+}
+
+/* div that wraps the logo image in the menu*/
+div.logo img {
+  height: auto;
+  width: 100%;
+  margin: 10px -20px 0 10px;
+}
+
+h1 {
+  font-size: 25px;
+  margin-left: 10px;
+  color: #0e5f35;
+  font-family: 'Libre Baskerville', serif;
+}
+
+p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+  margin-left: 10px;
+  color: #000;
+}
+
+/** SLIDESHOW **/
+.slideshow {
+  list-style-type: none;
+}
+
+/* Positiions the images */
+.slideshow,
+.slideshow:after {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  left: 0px;
+  z-index: 0;
+  padding: 20%;
+}
+
+/* Pertains to the positioning as well as the appareance of the images */
+.slideshow li span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 30s linear infinite 0s;
+}
+
+/* List of images and the display time */
+.slideshow li:nth-child(1) span {
+  background-image: url("https://sims-online.com/wp-content/uploads/2018/07/07-06-18_3-56-36-PM.png");
+}
+.slideshow li:nth-child(2) span {
+  background-image: url("https://i.ytimg.com/vi/dHSJqzQPyAM/maxresdefault.jpg");
+  animation-delay: 6s;
+}
+.slideshow li:nth-child(3) span {
+  background-image: url("https://simscommunity.info/wp-content/uploads/2016/09/The-Sims-4-City-Living-Official-Apartments-Trailer-046.jpg");
+  animation-delay: 12s;
+}
+.slideshow li:nth-child(4) span {
+  background-image: url("https://i.ytimg.com/vi/dOWRPpltj3o/maxresdefault.jpg");
+  animation-delay: 18s;
+}
+.slideshow li:nth-child(5) span {
+  background-image: url("https://sims4downloads.net/wp-content/uploads/2015/08/1165.jpg");
+  animation-delay: 24s;
+}
+
+/* How transparent an image should be & how the image is displayed  */
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+  8% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  19% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.no-cssanimations .cb-slideshow li span {
+  opacity: 1;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row {
+  margin: 0 20px 0 20px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  overflow-x: scroll;
+}
+
+.row img {
+  border-radius: 12px;
+  transition: all .3s ease-in-out;
+}
+.row img:hover {
+  box-shadow: -10px 10px 14px -4px rgba(0,0,0,0.71);
+  -webkit-box-shadow: -10px 10px 14px -4px rgba(0,0,0,0.71);
+  -moz-box-shadow: -10px 10px 14px -4px rgba(0,0,0,0.71);
+cursor: pointer;
+
+}
+
+/*Had to play around with the position value for modal to get it to hover over screen above content*/
+
+.modal {
+  display: none;
+  z-index: 1;
+  padding: 10px 62px 0px 62px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0 0 0 0;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.image-slide {
+	width: 100%;
+}
+
+.close {
+  color: white;
+  position: relative;
+  top: 10px;
+  right: 25px;
+  float: left;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
